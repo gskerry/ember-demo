@@ -2,16 +2,8 @@ import Ember from 'ember'
 
 export default Ember.Route.extend({
     model(){
-        return [
-            {id: '1', name:'Jake'},
-            {id: '2', name:'Greg'}
-        ]
+        const store = this.get('store')
+        return store.getOrders();
     }
-/*
-    model is primary
-    others:
-    activate(){}
-    deactivate(){}
-    redirect(){}
-*/
+    store: Ember.inject.service('store')
 })
