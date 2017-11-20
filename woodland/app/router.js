@@ -7,7 +7,10 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+    // this.route('index', {path: '/'}) // Auto/implied
     this.route('orders', {path: '/orders'})
+    // this.route('orders') // Shorthand also works when template and route have same name
+    
 });
 
 export default Router;
