@@ -3,7 +3,7 @@
 </h3>
 {{!-- <a href="/orders">Orders</a>   --}} {{!-- works... but triggers a full page refresh --}}
 
-{{#link-to "orders" tagName="div" class="orders-link"}}Orders{{/link-to}}
+{{#link-to "orders" tagName="button" class="orders-link"}}Orders{{/link-to}}
 {{!-- actually renders to DOM essentially as above. But ember watches for click event and basically intercepts the handler --}}
 {{!-- ** Updates the URL (back-button, bookmarks, etc... preserves state) --}}
 
