@@ -3,5 +3,9 @@
 
 Orders:<br>
 {{#each model as |order|}}
-    Order {{order.id}} for {{order.name}}<br>
+    {{#link-to "order" order}} {{!-- "order = ember route"; order = object being passed into link... to render the html element: (scope)--}}
+        Order {{order.id}} for {{order.name}}<br>
+    {{/link-to}}
 {{/each}}
+
+{{!-- {{#link-to "<route-name>" <obj-to-view>}} --}}
